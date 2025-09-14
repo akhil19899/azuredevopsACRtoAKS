@@ -10,7 +10,6 @@ description: Create Azure Pipeline to Build and Push Docker Image to Azure Conta
 - Understand Azure Pipelines
 - Implement a pipeline to Build and Push Docker Image to Azure Container Registry
 
-[![Image](https://stacksimplify.com/course-images/azure-devops-pipelines-build-and-push-docker-image-to-acr.png "Azure AKS Kubernetes - Masterclass")](https://stacksimplify.com/course-images/azure-devops-pipelines-build-and-push-docker-image-to-acr.png)
 
 ## Step-02: Create Github Project and Check-In Code
 ### Create Github Repo in Github
@@ -32,23 +31,20 @@ cd azure-devops-github-acr-aks-app1
 ```
 - Copy all files from `Giti-Repository-files` folder to our new repo folder `azure-devops-github-acr-aks-app1`
 ```
-# Initialize Git Repo
+# Initialize Git Repos
 cd azure-devops-github-acr-aks-app1
 git init
 
 # Do local Commit
 echo "# Azure DevOps App1 Demo with AKS, Github and ACR" >> README.md
 git add .
-git commit -am "V1 Base Commit"
+git commit -am "devopspushtocr"
 
 # Link Github Remote Repository
-git remote add origin https://github.com/stacksimplify/azure-devops-github-acr-aks-app1.git
+git remote add origin git remote add origin https://github.com/akhil19899/azuredevopsACRtoAKS.git
 
 # Push to Remote Repository
 git push --set-upstream origin master
-
-# Go to Github Repo - Refresh and check files appeared in githbu repo
-https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 ```
 
 ## Step-03: Review github checked-in files
@@ -59,10 +55,10 @@ https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 ## Step-04: Create Azure Container Registry ACR
 - Go to Services -> Container Registries
 - Click on **Add**
-- Subscription: StackSimplify-Paid-Subsciption
+- Subscription: XXXXXX
 - Resource Group: acr-rg1
-- Registry Name: aksdevopsacr   (NAME should be unique across Azure Cloud)
-- Location: Central US
+- Registry Name: aksdemo2acr   (NAME should be unique across Azure Cloud)
+- Location: east US
 - SKU: Basic  (Pricing Note: $0.167 per day)
 - Click on **Review + Create**
 - Click on **Create**
@@ -76,7 +72,7 @@ https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 
 
 ## Step-06 : Create DevOps Project
-- Project Name: azure-devops-github-acr-aks-app1
+- Project Name: Akhildevops
 - Project Description: AKS CICD Pipelines with Github and Azure Container Registry ACR
 - Visibility: Private
 - Advanced: Leave to defaults

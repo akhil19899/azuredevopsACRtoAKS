@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nginix2deplytoaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginix2deplytoaks
+  template:
+    metadata:
+      labels:
+        app: nginix2deplytoaks 
+    spec:
+      containers:
+        - name: nginix2deplytoaks 
+          image: aksdemo2acr.azurecr.io/nginix2deplytoaks
+          ports:
+          - containerPort: 80
